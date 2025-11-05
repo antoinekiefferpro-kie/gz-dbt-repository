@@ -7,6 +7,7 @@ Total shipping fees
 Total log costs
 Total quantity of products sold.*/
 
+
 SELECT
 date_date,
 COUNT (orders_id) AS Nb_of_transactions,
