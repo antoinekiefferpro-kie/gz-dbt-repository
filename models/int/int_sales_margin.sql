@@ -6,5 +6,6 @@ JOIN {{ ref('stg_gz_raw_data__product')}}
 USING (products_id)
 )
 SELECT*,
-{{margin_percent('revenue','purchase_cost')}} AS margin_percent
+{{margin_percent('revenue','purchase_cost')}} AS margin_percent,
+ROUND(revenue-purchase_cost,2) AS margin
 FROM sales_purchase_cost
