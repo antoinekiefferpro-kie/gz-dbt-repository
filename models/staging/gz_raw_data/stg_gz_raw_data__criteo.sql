@@ -10,6 +10,7 @@ renamed as (
 
     select
         date_date,
+        CONCAT(date_date,campaign_key) AS primary_campaign_key,
         paid_source,
         campaign_key,
         campgn_name AS campaign_name,

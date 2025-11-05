@@ -59,8 +59,16 @@ models:
        - name: quantity
          description: quantity
          tests:
-           - not_null                 
+           - not_null            
           
+   - name: int_campaigns
+     description: union of all campaign table
+     columns:
+       - name: primary_campaign_key
+         description: concat of date and campaign key
+         tests:
+           - unique
+           - not_null
    - name: int_orders_operational
      description: operation margin per orders and per days
      columns:
@@ -68,6 +76,5 @@ models:
          description: orders ID
          tests:
            - unique
-           - not_null
-              
+           - not_null           
               
