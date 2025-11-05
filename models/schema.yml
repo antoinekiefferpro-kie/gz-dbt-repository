@@ -76,5 +76,13 @@ models:
          description: orders ID
          tests:
            - unique
-           - not_null           
+           - not_null   
+   - name: int_campaigns_day
+     description: aggragation of campaign by date
+     columns:
+       - name: primary_campaign_key
+         description: concat of date and campaign key
+         tests:
+           - unique
+           - not_null                
               
